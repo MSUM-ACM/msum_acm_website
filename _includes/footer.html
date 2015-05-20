@@ -4,17 +4,32 @@
       <div class="col-md-8">
         <ul class="text-left">
           <li>Contact us :</li>
-	  <li>email : <a href= "mailto:msum_acm@gmail.com" >msum_acm@gmail.com</a></li>
-	  <li>location : Bridges 163</li>
-	  <li>address : 1104 7th Ave South, Moorhead, MN 56563 USA</li>
-	  <li>phone : 218-xxx-xxxx</li>
+          {% if site.data.settings.email %}
+	  <li>email : <a href="mailto:{{ site.data.settings.email }}" >{{ site.data.settings.email }}</a></li>
+	  {% endif %}
+	  {% if site.data.settings.location %}
+	  <li>location : {{ site.data.settings.location }}</li>
+	  {% endif %}
+	  {% if site.data.settings.address %}
+	  <li>address : {{ site.data.settings.address }}</li>
+	  {% endif %}
+	  {% if site.data.settings.phone %}
+	  <li>phone : {{ site.data.settings.phone }}</li>
+	  {% endif %}
        </ul>
       </div>
       <div class="col-md-4">
         <ul class="text-right">
-	  <li>Designed and developed by <a href='' target='_blank'>Jake Humphrey</a> and <a href='' target='_blank'>Anthony Ferre</a>.</li>
-          <li>Special thank you to <a href='http://www.benjaminjyring.com/portfolio/index.html' target='_blank'>Ben Jyring</a> for designing the MSUM ACM logo.</li>
-	  <li>&copy; 2015 MSUM ACM organization, all rights reserved.Hosted by <a href='http://github.com/schacon/schacon.github.com/' target='_blank'>GitHub</a>.</li>
+        {% if site.data.settings.DesignBy %}
+	  <li>{{ site.data.settings.DesignBy }}</li>
+	{% endif %}
+	<!-- http://www.benjaminjyring.com/portfolio/index.html -->
+	{% if site.data.settings.designMeta.specialThanks %}
+          <li>{{ site.data.settings.designMeta.specialThanks }}</li>
+        {% endif %}
+        {% if site.data.settings.copyright %}
+	  <li>{{ site.data.settings.copyright }}</li>
+	{% endif %}
         </ul>
       </div>
     </div>
