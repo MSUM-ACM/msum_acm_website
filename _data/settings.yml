@@ -14,7 +14,7 @@ location: Bridges 163
 #-------------------------------
 # Desgin and Copy Right Messages
 
-copyright: '© 2015 MSUM ACM organization, all rights reserved.Hosted by GitHub.'
+copyright: &copy; 2015 MSUM ACM organization, all rights reserved.Hosted by GitHub.
 Desginby: 'Designed and developed by Jake Humphrey and Anthony Ferre.'
 designMeta: 
   specialThanks: 'Special thank you to Ben Jyring for designing the MSUM ACM logo.'
